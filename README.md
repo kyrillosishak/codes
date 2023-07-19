@@ -117,3 +117,24 @@ Example usage:
 Document doc = Jsoup.connect("https://www.example.com").get();
 Elements links = doc.select("a[href]");
 ```
+# code (4)
+## Sentence Similarity Graph Construction
+
+This notebook demonstrates how to construct a graph based on the similarity between sentences using BERT embeddings. The graph represents each sentence as a node, and an edge exists between two nodes if the similarity between their corresponding sentences is above a user-defined threshold.
+
+## Installation
+
+- Install the required libraries by running the following command:
+
+```shell
+!pip install transformers networkx
+```
+## Usage
+1- Load Pre-trained BERT Model: The notebook utilizes the `BERT` (Bidirectional Encoder Representations from Transformers) model for sentence embeddings. The model is loaded using the `BertTokenizer` and `BertModel` classes from the transformers library.
+
+2- Calculate Cosine Similarity: The `calculate_similarity` function is defined to calculate the cosine similarity between two sentences using BERT embeddings. It tokenizes the sentences, obtains the token embeddings from the `BERT` model, and calculates the cosine similarity based on the embeddings.
+
+3- Construct Graph: The notebook constructs a graph using the provided list of sentences. Each sentence is represented as a node in the graph. The construct_graph function adds nodes to the graph and connects them based on the similarity above the given threshold.
+
+4- Visualize the Graph: The resulting graph is visualized using the `networkx` and `matplotlib` libraries. Nodes are represented as circles, and edges represent the connections between sentences. The resulting graph provides an intuitive visualization of sentence similarity.
+
