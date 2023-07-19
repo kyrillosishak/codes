@@ -74,3 +74,46 @@ Run the tool by executing the following command:
 python main.py
 ```
 The tool will find and display the loops in the graph, if any, and visualize the graph using matplotlib.
+
+# code (3)
+## URLExtractor
+URLExtractor is a Java tool that extracts URLs recursively from websites. It utilizes the Jsoup library for HTML parsing and provides multi-threaded extraction for faster processing.
+
+## How to Add Jsoup Library
+To use the Jsoup library in your Java project, follow these steps:
+
+Download the Jsoup library from the official website: https://jsoup.org/.
+
+Extract the downloaded zip file to obtain the Jsoup JAR file.
+
+Copy the Jsoup JAR file to your project's directory.
+
+Open your Java project in your preferred development environment.
+
+Add the Jsoup JAR file to your project's classpath:
+
+For command-line compilation, include the JAR file in the classpath using the -cp flag:
+
+```bash
+javac -cp path/to/jsoup.jar YourJavaFile.java
+``` 
+For IDEs (e.g. IntelliJ IDEA), follow these steps:
+
+IntelliJ IDEA:
+Right-click on your project and select Open Module Settings.
+In the Dependencies tab, click the + button and select JARs or directories.
+Browse and select the Jsoup JAR file, then click OK.
+You can now import and use the Jsoup library in your Java code:
+
+```
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+```
+Example usage:
+
+```
+Document doc = Jsoup.connect("https://www.example.com").get();
+Elements links = doc.select("a[href]");
+```
