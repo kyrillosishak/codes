@@ -36,3 +36,41 @@ File Structure
 main.cpp: The main C++ source code file containing the implementation of the Support Ticketing System.
 tickets.txt: A text file used to store the ticket data. The file is created automatically and updated when tickets are created or resolved.
 issue_types.txt: A text file used to store the available categories and types of issues. The file should be populated with category and type information before running the application.
+# code (2)
+## Graph Loop Finder
+
+This tool is designed to find and sketch loops in a graph based on edges defined in a CSV file.
+
+### Requirements
+
+- Python 3.x
+- pandas
+- networkx
+- matplotlib
+
+### Installation
+
+1. Clone the repository or download the source code.
+2. Install the required Python libraries by running the following command:
+
+```shell
+pip install pandas networkx matplotlib
+```
+### Usage
+Prepare a CSV file with two columns: 'A' and 'B'. Each row represents an edge in the graph, where 'A' is the source node and 'B' is the target node.
+
+Example CSV file:
+
+A,B <br>
+A,C <br>
+B,D <br>
+C,D <br>
+D,A <br>
+
+Update the file_path variable in the main.py file with the path to your CSV file.
+
+Run the tool by executing the following command:
+```shell
+python main.py
+```
+The tool will find and display the loops in the graph, if any, and visualize the graph using matplotlib.
